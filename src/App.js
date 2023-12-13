@@ -8,8 +8,9 @@ const App = () => {
   const [timer, setTimer] = useState(null);
   const [time, setTime] = useState(0)
 
-  if (!timer) {
-    const startTimer = () => {
+  
+  const startTimer = () => {
+    if (!time) {
       setTimer(setInterval(() => {
         setTime(prevValue => prevValue + 1);
       }, 1))
